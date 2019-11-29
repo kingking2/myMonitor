@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>服务器远程监控系统</title>
+<link rel="stylesheet" type="text/css" href="./js/easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="./js/easyui/themes/default/easyui.css">
+<script type="text/javascript" src="./js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="./js/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="./js/tabs.js"></script>
+</head>
+<body>
+<div  id="cc" class="easyui-layout" data-options="fit:true">   
+   
+   
+<!--     北面 -->
+    <div data-options="region:'north'" style="height:100px;">
+    <h1 style="text-align:center;">服务器远程监控系统</h1>
+    </div>  
+    
+    
+    
+    
+     
+    <div data-options="region:'south'" style="height:100px;">
+    <h3 style="text-align:center;">
+    东莞理工学院<br>
+  www.dgut.edu.cn<br>
+      徐锦威 
+    </h3>
+    </div>   
+    
+    
+    
+    
+    
+    
+        
+<!--         西部 -->
+    <div data-options="region:'west',title:'远程监控' " style="width:200px;">
+    
+    
+      
+    <div id="aa" class="easyui-accordion" style="width:auto ; height:auto">   
+    
+   
+    <div title="基本性能监控" data-options="iconCls:'icon-large-chart'" style="overflow:auto;padding:10px">   
+     <center>
+				<a id="btn1" href="#" class="easyui-linkbutton" onclick="addTab('CPU运行监控','cpu.jsp')">CPU运行监控</a> <br>
+				<a id="btn2" href="#" class="easyui-linkbutton"  onclick="addTab('硬盘使用监控','Hardware.jsp')">硬盘使用监控</a>  	    
+	</center>
+    </div>   
+    
+    
+    
+    
+    <div title="文件系统信息监控" data-options="iconCls:'icon-search',selected:true" style="padding:10px;">   
+        <ul class="easyui-tree" data-options="url:'./FileServlet'"></ul>    
+    </div>   
+    
+    
+    
+    
+    <div title="远程操作监控" data-options="iconCls:'icon-large-clipart',selected:true" style="padding:10px;">   
+    <center><a id="btn3" href="#" class="easyui-linkbutton"  onclick="addTab('远程操作监控','Monitor.jsp')">远程操作监控</a> </center>
+    </div>   
+</div>  
+    
+    </div>   
+    
+   
+   
+   
+   
+   
+   
+<!--    中部 -->
+     <div data-options="region:'center'">
+     
+     <div id="center-tabs" class="easyui-tabs" data-options="fit:true">
+   
+     
+     </div> 
+    
+   
+
+
+</div>  
+  
+</body>
+</html>
